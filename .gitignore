@@ -1,0 +1,26 @@
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Python / Entornos virtuales
+__pycache__/
+*.py[cod]
+venv/
+.env
+env/
+
+# Datos pesados (CSV, Modelos, Zips)
+*.csv
+*.zip
+*.pkl
+*.h5
+
+# Ignorar imágenes comunes
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+*.svg
+*.bmp
+*.tiff

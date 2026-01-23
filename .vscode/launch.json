@@ -1,0 +1,32 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Clasificador (con argumentos)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/style_classifier_local.py",
+            "console": "integratedTerminal",
+            "args": ["./pinturas"],
+            "justMyCode": true
+        },
+        {
+            "name": "Python: Clasificador (imagen individual)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/style_classifier_local.py",
+            "console": "integratedTerminal",
+            "args": ["./pinturas/ejemplo.jpg"],
+            "justMyCode": true
+        },
+        {
+            "name": "Python: Debug en Terminal",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [],
+            "justMyCode": true
+        }
+    ]
+}

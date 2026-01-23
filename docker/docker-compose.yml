@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: franlince_db
+    environment:
+      POSTGRES_USER: franlince
+      POSTGRES_PASSWORD: franlince123
+      POSTGRES_DB: franlince_catalog
+    ports:
+      - "5432:5432"
+    volumes:
+      - franlince_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    restart: unless-stopped
+
+volumes:
+  franlince_data:

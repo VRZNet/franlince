@@ -1,0 +1,2612 @@
+[
+  {
+    "archivo": "d4ba917c-5a05-48a4-8e70-f04878ac3545.JPG",
+    "ruta": "pinturas/d4ba917c-5a05-48a4-8e70-f04878ac3545.JPG",
+    "estilo_principal": "Floral",
+    "confianza": 0.1236117867373338,
+    "top_estilos": [
+      {
+        "estilo": "Floral",
+        "confianza": 0.1236117867373338
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.1172642162418149
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.11159371369078833
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Floral",
+        "confianza": 0.1236117867373338
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.1172642162418149
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.11159371369078833
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11129406738037664
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.11082365113406376
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.10748520943938435
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.10675589268028572
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.10625255226730942
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.10491891042864301
+      }
+    ]
+  },
+  {
+    "archivo": "7c8c50f8-44ba-4b02-a726-0e00003a9d7d.JPG",
+    "ruta": "pinturas/7c8c50f8-44ba-4b02-a726-0e00003a9d7d.JPG",
+    "estilo_principal": "Urbano",
+    "confianza": 0.12014373859766325,
+    "top_estilos": [
+      {
+        "estilo": "Urbano",
+        "confianza": 0.12014373859766325
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.1179713056051993
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.11392660283207617
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Urbano",
+        "confianza": 0.12014373859766325
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.1179713056051993
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.11392660283207617
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.10990173724607213
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.10947556458005737
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.10914881504180456
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.10788291244985661
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.10739760483673216
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.10415171881053857
+      }
+    ]
+  },
+  {
+    "archivo": "92397438-9ea1-4c51-9fcc-5f806aa948a5.JPG",
+    "ruta": "pinturas/92397438-9ea1-4c51-9fcc-5f806aa948a5.JPG",
+    "estilo_principal": "Urbano",
+    "confianza": 0.12916156757357283,
+    "top_estilos": [
+      {
+        "estilo": "Urbano",
+        "confianza": 0.12916156757357283
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.12005316983263582
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.11212960955912282
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Urbano",
+        "confianza": 0.12916156757357283
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.12005316983263582
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.11212960955912282
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.11143803945898517
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11066135012967071
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.11048720632282294
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.10246855250763798
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.10189532661805414
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.10170517799749752
+      }
+    ]
+  },
+  {
+    "archivo": "862636e0-9f39-485a-be6f-e9fce0a25253.JPG",
+    "ruta": "pinturas/862636e0-9f39-485a-be6f-e9fce0a25253.JPG",
+    "estilo_principal": "Religioso",
+    "confianza": 0.1159911157266227,
+    "top_estilos": [
+      {
+        "estilo": "Religioso",
+        "confianza": 0.1159911157266227
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11560704866076664
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.1134315450840522
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Religioso",
+        "confianza": 0.1159911157266227
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11560704866076664
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.1134315450840522
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.11340702541726114
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.1129603686841509
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.11283553452294019
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.10814770812505277
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.10570089426296411
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.1019187595161894
+      }
+    ]
+  },
+  {
+    "archivo": "4d79468c-0d2e-4a9c-a705-a77c6652d1e3.JPG",
+    "ruta": "pinturas/4d79468c-0d2e-4a9c-a705-a77c6652d1e3.JPG",
+    "estilo_principal": "Retrato",
+    "confianza": 0.12201121856083436,
+    "top_estilos": [
+      {
+        "estilo": "Retrato",
+        "confianza": 0.12201121856083436
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.12030037756511348
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.11612629328239127
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Retrato",
+        "confianza": 0.12201121856083436
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.12030037756511348
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.11612629328239127
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.11025748672240265
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.10853017925635795
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.10772149890938387
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.10705826166745415
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.10431465064775423
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.103680033388308
+      }
+    ]
+  },
+  {
+    "archivo": "37e94dc0-a6f8-4524-b1e2-49cd716da90e.JPG",
+    "ruta": "pinturas/37e94dc0-a6f8-4524-b1e2-49cd716da90e.JPG",
+    "estilo_principal": "Floral",
+    "confianza": 0.13106566326451302,
+    "top_estilos": [
+      {
+        "estilo": "Floral",
+        "confianza": 0.13106566326451302
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.12149108964178104
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.11159180562896501
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Floral",
+        "confianza": 0.13106566326451302
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.12149108964178104
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.11159180562896501
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11100372823351085
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.11050869602716763
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.10539442848546761
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.10450351131237613
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.10341411794201558
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.10102695946420318
+      }
+    ]
+  },
+  {
+    "archivo": "ced65759-cb48-40da-a1e4-7b27a91c87c0.JPG",
+    "ruta": "pinturas/ced65759-cb48-40da-a1e4-7b27a91c87c0.JPG",
+    "estilo_principal": "Paisaje",
+    "confianza": 0.11893169396488273,
+    "top_estilos": [
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.11893169396488273
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11471853810233211
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.11384844042326397
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.11893169396488273
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11471853810233211
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.11384844042326397
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.11175051278012048
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.1103583472479195
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.10937717923442992
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.10852320161607035
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.10692370885669628
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.10556837777428459
+      }
+    ]
+  },
+  {
+    "archivo": "9920bf72-de84-447a-967b-c90e0adcbdd4.JPG",
+    "ruta": "pinturas/9920bf72-de84-447a-967b-c90e0adcbdd4.JPG",
+    "estilo_principal": "Paisaje",
+    "confianza": 0.12280303913039345,
+    "top_estilos": [
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.12280303913039345
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11685344524692867
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.11633430183531561
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.12280303913039345
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11685344524692867
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.11633430183531561
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.11449387545278976
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.11114499346723127
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.10843563487939496
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.10744225865394846
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.104804643589211
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.09768780774478682
+      }
+    ]
+  },
+  {
+    "archivo": "03e8dae6-15ff-4e05-9231-28a49d6eb601.JPG",
+    "ruta": "pinturas/03e8dae6-15ff-4e05-9231-28a49d6eb601.JPG",
+    "estilo_principal": "Fauna",
+    "confianza": 0.12339520288734945,
+    "top_estilos": [
+      {
+        "estilo": "Fauna",
+        "confianza": 0.12339520288734945
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.11493884947829833
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.11429425835445531
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Fauna",
+        "confianza": 0.12339520288734945
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.11493884947829833
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.11429425835445531
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.1110391625732313
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.1093088182837168
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.10871744556464158
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.10837741215230769
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.10577534077786531
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.1041535099281341
+      }
+    ]
+  },
+  {
+    "archivo": "b31cfce5-aad3-46b0-8ed2-410e661e2f5a.JPG",
+    "ruta": "pinturas/b31cfce5-aad3-46b0-8ed2-410e661e2f5a.JPG",
+    "estilo_principal": "Floral",
+    "confianza": 0.11473896125184428,
+    "top_estilos": [
+      {
+        "estilo": "Floral",
+        "confianza": 0.11473896125184428
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11410615499800658
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.11369249922388228
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Floral",
+        "confianza": 0.11473896125184428
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11410615499800658
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.11369249922388228
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.11363453679392659
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.11283291413565577
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.10879141554487015
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.10858161517928545
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.1074693925876177
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.10615251028491106
+      }
+    ]
+  },
+  {
+    "archivo": "b7d9cf97-88f2-424c-a632-09c24b29e4e4.JPG",
+    "ruta": "pinturas/b7d9cf97-88f2-424c-a632-09c24b29e4e4.JPG",
+    "estilo_principal": "Fauna",
+    "confianza": 0.12241860548856506,
+    "top_estilos": [
+      {
+        "estilo": "Fauna",
+        "confianza": 0.12241860548856506
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.12224662602546246
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.11176005030500047
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Fauna",
+        "confianza": 0.12241860548856506
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.12224662602546246
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.11176005030500047
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.11006532328056473
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.10872294979314076
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.1083666337932136
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.10600573429795913
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.1058874781513207
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.10452659886477314
+      }
+    ]
+  },
+  {
+    "archivo": "ee7a7b53-aeeb-4dfb-a6f2-2a84bc7faf02.JPG",
+    "ruta": "pinturas/ee7a7b53-aeeb-4dfb-a6f2-2a84bc7faf02.JPG",
+    "estilo_principal": "Urbano",
+    "confianza": 0.11995887002439147,
+    "top_estilos": [
+      {
+        "estilo": "Urbano",
+        "confianza": 0.11995887002439147
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11357438954997985
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.113132663649974
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Urbano",
+        "confianza": 0.11995887002439147
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11357438954997985
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.113132663649974
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.11277664289419818
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.11110252597423234
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.1091013724869272
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.10737886984459723
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.10659245249370164
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.10638221308199827
+      }
+    ]
+  },
+  {
+    "archivo": "a95f6f50-846a-4456-a281-fd9a404eb44e.JPG",
+    "ruta": "pinturas/a95f6f50-846a-4456-a281-fd9a404eb44e.JPG",
+    "estilo_principal": "Fauna",
+    "confianza": 0.12716162330398897,
+    "top_estilos": [
+      {
+        "estilo": "Fauna",
+        "confianza": 0.12716162330398897
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.1155495681559371
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.11457532438667606
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Fauna",
+        "confianza": 0.12716162330398897
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.1155495681559371
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.11457532438667606
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.1114699732925596
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.10750808225533802
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.10685466133405601
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.10641908163822643
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.10602846448850667
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.10443322114471108
+      }
+    ]
+  },
+  {
+    "archivo": "c32db47b-c51f-47ab-8858-6f2a14cbd0cd.JPG",
+    "ruta": "pinturas/c32db47b-c51f-47ab-8858-6f2a14cbd0cd.JPG",
+    "estilo_principal": "Fauna",
+    "confianza": 0.11702992744998866,
+    "top_estilos": [
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11702992744998866
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.11603305581478486
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.11496969604671237
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11702992744998866
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.11603305581478486
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.11496969604671237
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.11414883634377841
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.11144189221504461
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.10837001244926583
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.10792424148050861
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.10624411573310313
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.10383822246681332
+      }
+    ]
+  },
+  {
+    "archivo": "d6f09afc-e4bb-4e0b-b17c-d2be7854300d.JPG",
+    "ruta": "pinturas/d6f09afc-e4bb-4e0b-b17c-d2be7854300d.JPG",
+    "estilo_principal": "Retrato",
+    "confianza": 0.12756407009465978,
+    "top_estilos": [
+      {
+        "estilo": "Retrato",
+        "confianza": 0.12756407009465978
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.11574784368453256
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.11442958894412343
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Retrato",
+        "confianza": 0.12756407009465978
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.11574784368453256
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.11442958894412343
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.11372563319865146
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.10742142962940693
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.10707937030549565
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.10650434723653597
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.10440596010822098
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.10312175679837327
+      }
+    ]
+  },
+  {
+    "archivo": "6aa98dfa-ed46-4396-b83a-b218f44aacbb.JPG",
+    "ruta": "pinturas/6aa98dfa-ed46-4396-b83a-b218f44aacbb.JPG",
+    "estilo_principal": "Retrato",
+    "confianza": 0.12590906793321852,
+    "top_estilos": [
+      {
+        "estilo": "Retrato",
+        "confianza": 0.12590906793321852
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.11627806383984764
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.11451963450140798
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Retrato",
+        "confianza": 0.12590906793321852
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.11627806383984764
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.11451963450140798
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.11347563274398775
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.10961526684513034
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.10838691696009306
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.10628251972793781
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.10399682115368877
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.1015360762946882
+      }
+    ]
+  },
+  {
+    "archivo": "86d23049-0fc9-4f46-911a-fdf5dd49cadd.JPG",
+    "ruta": "pinturas/86d23049-0fc9-4f46-911a-fdf5dd49cadd.JPG",
+    "estilo_principal": "Floral",
+    "confianza": 0.11549136700198963,
+    "top_estilos": [
+      {
+        "estilo": "Floral",
+        "confianza": 0.11549136700198963
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.11436218044155516
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11226789417100987
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Floral",
+        "confianza": 0.11549136700198963
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.11436218044155516
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11226789417100987
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.11187294445562619
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.11052268093010098
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.10993458921562656
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.10929748417507702
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.10844275847565277
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.10780810113336174
+      }
+    ]
+  },
+  {
+    "archivo": "06798063-ca20-4728-976e-1d11c24db88b.JPG",
+    "ruta": "pinturas/06798063-ca20-4728-976e-1d11c24db88b.JPG",
+    "estilo_principal": "Urbano",
+    "confianza": 0.12392586064834209,
+    "top_estilos": [
+      {
+        "estilo": "Urbano",
+        "confianza": 0.12392586064834209
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.1191347984757439
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11331843189437893
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Urbano",
+        "confianza": 0.12392586064834209
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.1191347984757439
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11331843189437893
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.11077559016167031
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.10992165493831087
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.10684000609960227
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.10627030007578311
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.10515125064156312
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.10466210706460537
+      }
+    ]
+  },
+  {
+    "archivo": "c105bc55-3d96-4921-9ef1-9a87fa2b3089.JPG",
+    "ruta": "pinturas/c105bc55-3d96-4921-9ef1-9a87fa2b3089.JPG",
+    "estilo_principal": "Retrato",
+    "confianza": 0.12300752252782655,
+    "top_estilos": [
+      {
+        "estilo": "Retrato",
+        "confianza": 0.12300752252782655
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.12107313199469606
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.11336089039037255
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Retrato",
+        "confianza": 0.12300752252782655
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.12107313199469606
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.11336089039037255
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.1113181109356775
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.10895142470730014
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.10837149987119545
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.10771010907961708
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.10443408507318132
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.10177322542013333
+      }
+    ]
+  },
+  {
+    "archivo": "6b88b85b-8c9c-47ee-a0b5-46a18db8a10b.JPG",
+    "ruta": "pinturas/6b88b85b-8c9c-47ee-a0b5-46a18db8a10b.JPG",
+    "estilo_principal": "Urbano",
+    "confianza": 0.12119835420098177,
+    "top_estilos": [
+      {
+        "estilo": "Urbano",
+        "confianza": 0.12119835420098177
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.11168203926025407
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11117615575008795
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Urbano",
+        "confianza": 0.12119835420098177
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.11168203926025407
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11117615575008795
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.11099446342992662
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.10966058728894364
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.10941497116532248
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.10893478955416837
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.10864464324088204
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.10829399610943304
+      }
+    ]
+  },
+  {
+    "archivo": "7b45a8cd-a204-4f25-8f2b-6baf3e729fe8.JPG",
+    "ruta": "pinturas/7b45a8cd-a204-4f25-8f2b-6baf3e729fe8.JPG",
+    "estilo_principal": "Urbano",
+    "confianza": 0.12535336418543006,
+    "top_estilos": [
+      {
+        "estilo": "Urbano",
+        "confianza": 0.12535336418543006
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.11456945276576953
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11294220726409493
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Urbano",
+        "confianza": 0.12535336418543006
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.11456945276576953
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11294220726409493
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.11216329725762116
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.1115456303891654
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.10987639346394268
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.10968451411951256
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.10256374526298112
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.1013013952914827
+      }
+    ]
+  },
+  {
+    "archivo": "d74473ab-57de-44d0-b002-fd89bd42171b.JPG",
+    "ruta": "pinturas/d74473ab-57de-44d0-b002-fd89bd42171b.JPG",
+    "estilo_principal": "Urbano",
+    "confianza": 0.12368251699160146,
+    "top_estilos": [
+      {
+        "estilo": "Urbano",
+        "confianza": 0.12368251699160146
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.11954395171575387
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11339184447788131
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Urbano",
+        "confianza": 0.12368251699160146
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.11954395171575387
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11339184447788131
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.11174380009545533
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.11021113864009416
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.10979906624462096
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.10524096110704687
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.1034350034672476
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.1029517172602983
+      }
+    ]
+  },
+  {
+    "archivo": "33c34958-6a71-4ca2-886a-a458b795c8ea.JPG",
+    "ruta": "pinturas/33c34958-6a71-4ca2-886a-a458b795c8ea.JPG",
+    "estilo_principal": "Fauna",
+    "confianza": 0.12243548176003025,
+    "top_estilos": [
+      {
+        "estilo": "Fauna",
+        "confianza": 0.12243548176003025
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.11527805759195005
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.11294733670139562
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Fauna",
+        "confianza": 0.12243548176003025
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.11527805759195005
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.11294733670139562
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.1119579508508383
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.10996857492175863
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.10887906555251013
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.10753941956638192
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.10747812363224866
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.10351598942288656
+      }
+    ]
+  },
+  {
+    "archivo": "d8e8e82a-d85f-4ad2-8457-fd645a2045dc.JPG",
+    "ruta": "pinturas/d8e8e82a-d85f-4ad2-8457-fd645a2045dc.JPG",
+    "estilo_principal": "Retrato",
+    "confianza": 0.12876997751704855,
+    "top_estilos": [
+      {
+        "estilo": "Retrato",
+        "confianza": 0.12876997751704855
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.1174942534579843
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.11605312327338592
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Retrato",
+        "confianza": 0.12876997751704855
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.1174942534579843
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.11605312327338592
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.11215862502907158
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.10761280965002543
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.10592310165390975
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.10513823065425813
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.10441227287819886
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.10243760588611732
+      }
+    ]
+  },
+  {
+    "archivo": "f2b193bc-ce82-4784-a8c0-801832e70cec.JPG",
+    "ruta": "pinturas/f2b193bc-ce82-4784-a8c0-801832e70cec.JPG",
+    "estilo_principal": "Urbano",
+    "confianza": 0.12723587908326717,
+    "top_estilos": [
+      {
+        "estilo": "Urbano",
+        "confianza": 0.12723587908326717
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.12408723509988447
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.1134523565345489
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Urbano",
+        "confianza": 0.12723587908326717
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.12408723509988447
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.1134523565345489
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.11072189870024525
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.10931607075639277
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.10555632565419674
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.10523461535082053
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.10234869486710882
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.10204692395353532
+      }
+    ]
+  },
+  {
+    "archivo": "6848866e-10f2-485a-857c-74654596e588.JPG",
+    "ruta": "pinturas/6848866e-10f2-485a-857c-74654596e588.JPG",
+    "estilo_principal": "Abstracto",
+    "confianza": 0.12049799694183062,
+    "top_estilos": [
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.12049799694183062
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.11711953714463551
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11467742162740947
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.12049799694183062
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.11711953714463551
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11467742162740947
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.1134460795180805
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.11121856369724609
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.10853199116034659
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.10745042524202124
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.10626664574650813
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.10079133892192188
+      }
+    ]
+  },
+  {
+    "archivo": "7800f256-57e8-4ea4-9735-b83d64209efe.JPG",
+    "ruta": "pinturas/7800f256-57e8-4ea4-9735-b83d64209efe.JPG",
+    "estilo_principal": "Floral",
+    "confianza": 0.11553453688372782,
+    "top_estilos": [
+      {
+        "estilo": "Floral",
+        "confianza": 0.11553453688372782
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.11307359698953817
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.11248217243485144
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Floral",
+        "confianza": 0.11553453688372782
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.11307359698953817
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.11248217243485144
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11242730311295952
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.11183393950633459
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.11164542247703295
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.11122600180723871
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.10949747109251538
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.10227955569580134
+      }
+    ]
+  },
+  {
+    "archivo": "52693491-d970-470d-9cc9-1e9264e57602.JPG",
+    "ruta": "pinturas/52693491-d970-470d-9cc9-1e9264e57602.JPG",
+    "estilo_principal": "Floral",
+    "confianza": 0.12872039224299883,
+    "top_estilos": [
+      {
+        "estilo": "Floral",
+        "confianza": 0.12872039224299883
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11168283286258321
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.11076236809254064
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Floral",
+        "confianza": 0.12872039224299883
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11168283286258321
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.11076236809254064
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.10951277239428744
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.10946511265535144
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.10899419555720609
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.10811518526734816
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.10732426769835515
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.10542287322932917
+      }
+    ]
+  },
+  {
+    "archivo": "b9d1d5dd-fc1d-4e2c-9ba8-4b9abfc2f505.JPG",
+    "ruta": "pinturas/b9d1d5dd-fc1d-4e2c-9ba8-4b9abfc2f505.JPG",
+    "estilo_principal": "Retrato",
+    "confianza": 0.11824482814447858,
+    "top_estilos": [
+      {
+        "estilo": "Retrato",
+        "confianza": 0.11824482814447858
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.11583790458512826
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.11413928988498369
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Retrato",
+        "confianza": 0.11824482814447858
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.11583790458512826
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.11413928988498369
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.10986282547742192
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.10975913572189855
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.10970439154726483
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.10913847338528396
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.10743047023570558
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.1058826810178347
+      }
+    ]
+  },
+  {
+    "archivo": "a3ddba25-f4bf-4f27-b553-6e03500b46f7.JPG",
+    "ruta": "pinturas/a3ddba25-f4bf-4f27-b553-6e03500b46f7.JPG",
+    "estilo_principal": "Paisaje",
+    "confianza": 0.12330118354308497,
+    "top_estilos": [
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.12330118354308497
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.11809263183555102
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11612586552634586
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.12330118354308497
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.11809263183555102
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11612586552634586
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.11207185954566246
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.11018408182560034
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.10969597079110405
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.10763744749465272
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.10555749807045976
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.09733346136753865
+      }
+    ]
+  },
+  {
+    "archivo": "c39501a5-3b15-4d56-83e9-31b6596ecaf3.JPG",
+    "ruta": "pinturas/c39501a5-3b15-4d56-83e9-31b6596ecaf3.JPG",
+    "estilo_principal": "Abstracto",
+    "confianza": 0.12342128607032353,
+    "top_estilos": [
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.12342128607032353
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.11917409265027906
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.11528793793743135
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.12342128607032353
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.11917409265027906
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.11528793793743135
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11139385451167033
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.11036759223476676
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.10672855592352712
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.1059323779798726
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.10571062063281997
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.10198368205930933
+      }
+    ]
+  },
+  {
+    "archivo": "347bffb3-4363-42e3-9f5e-dfe5497e112f.JPG",
+    "ruta": "pinturas/347bffb3-4363-42e3-9f5e-dfe5497e112f.JPG",
+    "estilo_principal": "Naturaleza Muerta",
+    "confianza": 0.11959428609893775,
+    "top_estilos": [
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.11959428609893775
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.1190370090663177
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.11426832537813646
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.11959428609893775
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.1190370090663177
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.11426832537813646
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.1129788968077013
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11118633107062738
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.1077997643862734
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.10688670194752728
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.10662382293776111
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.10162486230671774
+      }
+    ]
+  },
+  {
+    "archivo": "b1449f8a-65ae-4ea6-b3c2-474f3c2d046c.JPG",
+    "ruta": "pinturas/b1449f8a-65ae-4ea6-b3c2-474f3c2d046c.JPG",
+    "estilo_principal": "Retrato",
+    "confianza": 0.11800684354889071,
+    "top_estilos": [
+      {
+        "estilo": "Retrato",
+        "confianza": 0.11800684354889071
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.11517967194689918
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.11361568599660266
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Retrato",
+        "confianza": 0.11800684354889071
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.11517967194689918
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.11361568599660266
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.11348460114102242
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.10958952699625865
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.10904858265281342
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.10806605055921438
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.10674883993832086
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.1062601972199777
+      }
+    ]
+  },
+  {
+    "archivo": "f7df6fbd-5e28-4367-823b-77f3119fbc1b.JPG",
+    "ruta": "pinturas/f7df6fbd-5e28-4367-823b-77f3119fbc1b.JPG",
+    "estilo_principal": "Floral",
+    "confianza": 0.1268698441795207,
+    "top_estilos": [
+      {
+        "estilo": "Floral",
+        "confianza": 0.1268698441795207
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.11225266287216414
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.11135299872500634
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Floral",
+        "confianza": 0.1268698441795207
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.11225266287216414
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.11135299872500634
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11085768748167081
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.11031510242355065
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.10757360491627278
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.10736387804930109
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.10683505001114166
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.10657917134137186
+      }
+    ]
+  },
+  {
+    "archivo": "c2348de1-990f-45bb-898e-c60b866ebfe8.JPG",
+    "ruta": "pinturas/c2348de1-990f-45bb-898e-c60b866ebfe8.JPG",
+    "estilo_principal": "Naturaleza Muerta",
+    "confianza": 0.12906540941492603,
+    "top_estilos": [
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.12906540941492603
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.11458181943139306
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.11168268536897216
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.12906540941492603
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.11458181943139306
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.11168268536897216
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.11162155600585519
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.10916440400215309
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.10845081372043393
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.10663420864524822
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.10450205506857388
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.1042970483424445
+      }
+    ]
+  },
+  {
+    "archivo": "9f875e3c-70f2-4143-b065-445e131f5174.JPG",
+    "ruta": "pinturas/9f875e3c-70f2-4143-b065-445e131f5174.JPG",
+    "estilo_principal": "Floral",
+    "confianza": 0.13077564168335756,
+    "top_estilos": [
+      {
+        "estilo": "Floral",
+        "confianza": 0.13077564168335756
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.12095592280794494
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11114521149653521
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Floral",
+        "confianza": 0.13077564168335756
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.12095592280794494
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11114521149653521
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.11101941871427912
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.1104628566283672
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.10546107834816004
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.10501377083976333
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.10359853105104228
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.10156756843055041
+      }
+    ]
+  },
+  {
+    "archivo": "2fd7ac9f-dd62-4300-a85c-53f657022e0d.JPG",
+    "ruta": "pinturas/2fd7ac9f-dd62-4300-a85c-53f657022e0d.JPG",
+    "estilo_principal": "Floral",
+    "confianza": 0.11964664187213132,
+    "top_estilos": [
+      {
+        "estilo": "Floral",
+        "confianza": 0.11964664187213132
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11662471077673155
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.11419807931663195
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Floral",
+        "confianza": 0.11964664187213132
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11662471077673155
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.11419807931663195
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.11201657290006253
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.11058500903891243
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.11001590881127861
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.10681387243098758
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.10613702147712367
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.10396218337614027
+      }
+    ]
+  },
+  {
+    "archivo": "d6a104a7-2776-4baa-b120-9f326d4da423.JPG",
+    "ruta": "pinturas/d6a104a7-2776-4baa-b120-9f326d4da423.JPG",
+    "estilo_principal": "Urbano",
+    "confianza": 0.11841154368919164,
+    "top_estilos": [
+      {
+        "estilo": "Urbano",
+        "confianza": 0.11841154368919164
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.11670406107992812
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11459631042699125
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Urbano",
+        "confianza": 0.11841154368919164
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.11670406107992812
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11459631042699125
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.11445687609503827
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.10990081463599556
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.10833901635507776
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.10651170663722172
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.10560612340775033
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.1054735476728054
+      }
+    ]
+  },
+  {
+    "archivo": "9c5deb2a-4b20-42e7-be0d-c622461e323d.JPG",
+    "ruta": "pinturas/9c5deb2a-4b20-42e7-be0d-c622461e323d.JPG",
+    "estilo_principal": "Floral",
+    "confianza": 0.11924890330970127,
+    "top_estilos": [
+      {
+        "estilo": "Floral",
+        "confianza": 0.11924890330970127
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.1143920996675299
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.11355244426477179
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Floral",
+        "confianza": 0.11924890330970127
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.1143920996675299
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.11355244426477179
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.1115873770701304
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.11128382426644787
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.11099557506939375
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.10887642339005678
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.10591866769016826
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.10414468527179999
+      }
+    ]
+  },
+  {
+    "archivo": "86178698-22a1-447a-9cc2-20e486b2c3e1.JPG",
+    "ruta": "pinturas/86178698-22a1-447a-9cc2-20e486b2c3e1.JPG",
+    "estilo_principal": "Urbano",
+    "confianza": 0.12194937401317786,
+    "top_estilos": [
+      {
+        "estilo": "Urbano",
+        "confianza": 0.12194937401317786
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.1170166863222194
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.11148378186709038
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Urbano",
+        "confianza": 0.12194937401317786
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.1170166863222194
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.11148378186709038
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11073096367679561
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.10986767025137137
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.10954720686387429
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.10728359984155064
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.10648308143200656
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.10563763573191394
+      }
+    ]
+  },
+  {
+    "archivo": "65ee9380-8962-4731-b968-ef17ab820596.JPG",
+    "ruta": "pinturas/65ee9380-8962-4731-b968-ef17ab820596.JPG",
+    "estilo_principal": "Urbano",
+    "confianza": 0.12072575596496397,
+    "top_estilos": [
+      {
+        "estilo": "Urbano",
+        "confianza": 0.12072575596496397
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.12070042935031014
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.11684359824307765
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Urbano",
+        "confianza": 0.12072575596496397
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.12070042935031014
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.11684359824307765
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11414011670236594
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.10723280165635753
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.10687871277724921
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.10585879325103555
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.10553207867904286
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.10208771337559719
+      }
+    ]
+  },
+  {
+    "archivo": "14883e36-f8a3-49a8-8e41-ec01eacd23f8.JPG",
+    "ruta": "pinturas/14883e36-f8a3-49a8-8e41-ec01eacd23f8.JPG",
+    "estilo_principal": "Abstracto",
+    "confianza": 0.12205207070181551,
+    "top_estilos": [
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.12205207070181551
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.11765553536029502
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.11460771149981597
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.12205207070181551
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.11765553536029502
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.11460771149981597
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11165425923900739
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.1114410801367866
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.10699577606363674
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.10606478270443306
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.10519503470595334
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.1043337495882564
+      }
+    ]
+  },
+  {
+    "archivo": "ff47d1bd-5bf9-492d-aa92-e25465fbca10.JPG",
+    "ruta": "pinturas/ff47d1bd-5bf9-492d-aa92-e25465fbca10.JPG",
+    "estilo_principal": "Retrato",
+    "confianza": 0.12962407928748781,
+    "top_estilos": [
+      {
+        "estilo": "Retrato",
+        "confianza": 0.12962407928748781
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.11624474892104249
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.11499369551682752
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Retrato",
+        "confianza": 0.12962407928748781
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.11624474892104249
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.11499369551682752
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.11230520300306696
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.10887724316698996
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.10719161552755017
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.10435011911575555
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.10420444235339145
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.102208853107888
+      }
+    ]
+  },
+  {
+    "archivo": "995b201f-b088-4df3-9849-2be17e41d091.JPG",
+    "ruta": "pinturas/995b201f-b088-4df3-9849-2be17e41d091.JPG",
+    "estilo_principal": "Urbano",
+    "confianza": 0.12258503257961884,
+    "top_estilos": [
+      {
+        "estilo": "Urbano",
+        "confianza": 0.12258503257961884
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.11268913182880358
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.11210177616706443
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Urbano",
+        "confianza": 0.12258503257961884
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.11268913182880358
+      },
+      {
+        "estilo": "Retrato",
+        "confianza": 0.11210177616706443
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.11161925006489805
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.11079188437534641
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.10864396953041026
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.107827776266432
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.107746106725148
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.10599507246227846
+      }
+    ]
+  },
+  {
+    "archivo": "e1f6c4a6-3a23-4104-b4d6-2003b4dfabaf.JPG",
+    "ruta": "pinturas/e1f6c4a6-3a23-4104-b4d6-2003b4dfabaf.JPG",
+    "estilo_principal": "Retrato",
+    "confianza": 0.12521799137615686,
+    "top_estilos": [
+      {
+        "estilo": "Retrato",
+        "confianza": 0.12521799137615686
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.1169291234539006
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.11444633293654209
+      }
+    ],
+    "todos_los_estilos": [
+      {
+        "estilo": "Retrato",
+        "confianza": 0.12521799137615686
+      },
+      {
+        "estilo": "Urbano",
+        "confianza": 0.1169291234539006
+      },
+      {
+        "estilo": "Abstracto",
+        "confianza": 0.11444633293654209
+      },
+      {
+        "estilo": "Religioso",
+        "confianza": 0.11323654776912981
+      },
+      {
+        "estilo": "Fauna",
+        "confianza": 0.10995679393685985
+      },
+      {
+        "estilo": "Floral",
+        "confianza": 0.10874718431098708
+      },
+      {
+        "estilo": "Paisaje",
+        "confianza": 0.10623748996417215
+      },
+      {
+        "estilo": "Naturaleza Muerta",
+        "confianza": 0.10375358618478205
+      },
+      {
+        "estilo": "Marino",
+        "confianza": 0.10147495006746948
+      }
+    ]
+  }
+]
