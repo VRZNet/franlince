@@ -96,3 +96,6 @@ MEDIA_TYPES: Dict[str, str] = {
 
 # Classification temperature for softmax
 CLASSIFICATION_TEMPERATURE: float = 0.5
+
+# Minimum similarity threshold for semantic search (28%)
+MIN_SIMILARITY_THRESHOLD: float = 0.28

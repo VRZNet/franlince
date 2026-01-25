@@ -7,6 +7,7 @@ from fastapi import APIRouter, Query, Depends
 from src.api.dependencies import get_embedding_service, get_repository
 from src.services.embedding import EmbeddingService
 from src.repositories.painting_repository import PaintingRepository
+from src.core.constants import MIN_SIMILARITY_THRESHOLD
 
 
 router = APIRouter(prefix="/catalog", tags=["Busqueda"])
@@ -37,6 +38,7 @@ async def search_by_style(
 async def semantic_search(
     query: str = Query(..., description="Description of what you're looking for"),
     limit: int = Query(10, description="Number of results"),
+    min_similarity: float = Query(MIN_SIMILARITY_THRESHOLD, description="Minimum similarity threshold (0-1, default 28%)"),
     embedding_service: EmbeddingService = Depends(get_embedding_service),
     repository: PaintingRepository = Depends(get_repository)
 ):
@@ -51,7 +53,7 @@ async def semantic_search(
     """
     query_embedding = embedding_service.get_text_embedding(query)
 
-    results = repository.semantic_search(query_embedding, limit)
+    results = repository.semantic_search(query_embedding, limit, min_similarity)
 
     return {
         "query": query,
