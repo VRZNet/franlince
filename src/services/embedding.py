@@ -2,11 +2,13 @@
 Embedding service for generating image and text embeddings.
 """
 
+import re
 from typing import Optional, List
 
 import torch
 from PIL import Image
 from transformers import CLIPProcessor, CLIPModel
+from deep_translator import GoogleTranslator
 
 from src.core.config import get_settings
 from src.services.image_processor import ImageProcessor
@@ -107,12 +109,64 @@ class EmbeddingService:
         image = self.image_processor.load_from_bytes(image_bytes)
         return self.get_image_embedding(image)
 
+    def _is_spanish(self, text: str) -> bool:
+        """
+        Detect if text contains Spanish characters or common Spanish words.
+
+        Args:
+            text: Text to analyze.
+
+        Returns:
+            True if text appears to be in Spanish.
+        """
+        spanish_chars = re.compile(r'[áéíóúüñ¿¡]', re.IGNORECASE)
+        if spanish_chars.search(text):
+            return True
+
+        spanish_words = [
+            'con', 'del', 'las', 'los', 'una', 'uno', 'para', 'por',
+            'sobre', 'entre', 'hacia', 'desde', 'hasta', 'durante',
+            'mediante', 'según', 'sin', 'bajo', 'contra', 'ante',
+            'flores', 'paisaje', 'montañas', 'caballos', 'personas',
+            'casa', 'árbol', 'cielo', 'mar', 'río', 'bosque', 'campo',
+            'noche', 'día', 'sol', 'luna', 'estrellas', 'nubes',
+            'colores', 'azul', 'rojo', 'verde', 'amarillo', 'blanco',
+            'negro', 'abstracto', 'moderno', 'antiguo', 'clásico'
+        ]
+
+        text_lower = text.lower()
+        words = text_lower.split()
+
+        for word in words:
+            if word in spanish_words:
+                return True
+
+        return False
+
+    def _translate_to_english(self, text: str) -> str:
+        """
+        Translate Spanish text to English.
+
+        Args:
+            text: Text to translate.
+
+        Returns:
+            Translated text in English.
+        """
+        try:
+            translator = GoogleTranslator(source='es', target='en')
+            translated = translator.translate(text)
+            return translated if translated else text
+        except Exception:
+            return text
+
     def get_text_embedding(self, text: str) -> List[float]:
         """
         Generate embedding for text query.
+        Automatically translates Spanish to English for better CLIP results.
 
         Args:
-            text: Text to embed.
+            text: Text to embed (Spanish or English).
 
         Returns:
             List of embedding values (512 dimensions).
@@ -120,8 +174,18 @@ class EmbeddingService:
         if not self._is_loaded:
             self.load_model()
 
+        # Traducir español a inglés si es necesario
+        if self._is_spanish(text):
+            text_en = self._translate_to_english(text)
+            print(f"Traducción: '{text}' → '{text_en}'")
+        else:
+            text_en = text
+
+        # Usar un prompt que le de más contexto al modelo
+        prompt = f"a painting of {text_en}"
+
         inputs = self.processor(
-            text=[text],
+            text=[prompt],
             return_tensors="pt",
             padding=True
         )

@@ -9,6 +9,7 @@ import psycopg2
 
 from src.database.connection import DatabaseConnection
 from src.services.embedding import EmbeddingService
+from src.core.constants import MIN_SIMILARITY_THRESHOLD
 
 
 class PaintingRepository:
@@ -184,7 +185,8 @@ class PaintingRepository:
     def semantic_search(
         self,
         query_embedding: List[float],
-        limit: int = 10
+        limit: int = 10,
+        min_similarity: float = MIN_SIMILARITY_THRESHOLD
     ) -> List[dict]:
         """
         Search paintings by semantic similarity.
@@ -192,6 +194,7 @@ class PaintingRepository:
         Args:
             query_embedding: Text query embedding.
             limit: Maximum results.
+            min_similarity: Minimum similarity threshold (default 0.28 = 28%).
 
         Returns:
             List of matching paintings with similarity scores.
@@ -199,15 +202,20 @@ class PaintingRepository:
         embedding_str = EmbeddingService.embedding_to_pg_format(query_embedding)
 
         with DatabaseConnection.get_cursor() as cursor:
+            # Usar L2 distance (<->) que funciona mejor con CLIP
+            # Usar inner product (<#>) que es más rapido y equivale a cosine
+            # similarity si los vectores están normalizados.
+            # El resultado de <#> es negativo, por eso se multiplica por -1.
             cursor.execute("""
                 SELECT
                     id, archivo, ruta, estilo_principal, confianza,
-                    1 - (embedding <=> %s::vector) as similitud
+                    (embedding <#> %s::vector) * -1 as similitud
                 FROM pinturas
                 WHERE embedding IS NOT NULL
-                ORDER BY embedding <=> %s::vector
+                  AND (embedding <#> %s::vector) * -1 >= %s
+                ORDER BY embedding <#> %s::vector
                 LIMIT %s
-            """, (embedding_str, embedding_str, limit))
+            """, (embedding_str, embedding_str, min_similarity, embedding_str, limit))
 
             return [dict(row) for row in cursor.fetchall()]
 
