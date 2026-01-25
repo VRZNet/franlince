@@ -155,6 +155,7 @@ docker ps
 ```bash
 python run.py
 ```
+source venv/bin/activate && python run.py  
 
 La API estara disponible en `http://localhost:8000`
 
