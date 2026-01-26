@@ -2,7 +2,6 @@
 Embedding service for generating image and text embeddings.
 """
 
-import re
 from typing import Optional, List
 
 import torch
@@ -109,53 +108,28 @@ class EmbeddingService:
         image = self.image_processor.load_from_bytes(image_bytes)
         return self.get_image_embedding(image)
 
-    def _is_spanish(self, text: str) -> bool:
-        """
-        Detect if text contains Spanish characters or common Spanish words.
-
-        Args:
-            text: Text to analyze.
-
-        Returns:
-            True if text appears to be in Spanish.
-        """
-        spanish_chars = re.compile(r'[áéíóúüñ¿¡]', re.IGNORECASE)
-        if spanish_chars.search(text):
-            return True
-
-        spanish_words = [
-            'con', 'del', 'las', 'los', 'una', 'uno', 'para', 'por',
-            'sobre', 'entre', 'hacia', 'desde', 'hasta', 'durante',
-            'mediante', 'según', 'sin', 'bajo', 'contra', 'ante',
-            'flores', 'paisaje', 'montañas', 'caballos', 'personas',
-            'casa', 'árbol', 'cielo', 'mar', 'río', 'bosque', 'campo',
-            'noche', 'día', 'sol', 'luna', 'estrellas', 'nubes',
-            'colores', 'azul', 'rojo', 'verde', 'amarillo', 'blanco',
-            'negro', 'abstracto', 'moderno', 'antiguo', 'clásico'
-        ]
-
-        text_lower = text.lower()
-        words = text_lower.split()
-
-        for word in words:
-            if word in spanish_words:
-                return True
-
-        return False
-
     def _translate_to_english(self, text: str) -> str:
         """
-        Translate Spanish text to English.
+        Translate text to English, trying Spanish first then auto-detection.
 
         Args:
-            text: Text to translate.
+            text: Text to translate (any language).
 
         Returns:
             Translated text in English.
         """
         try:
-            translator = GoogleTranslator(source='es', target='en')
-            translated = translator.translate(text)
+            # Primero intentar con español forzado
+            translator_es = GoogleTranslator(source='es', target='en')
+            translated = translator_es.translate(text)
+
+            # Si la traducción es diferente, usarla
+            if translated and translated.lower() != text.lower():
+                return translated
+
+            # Si no cambió, intentar con auto-detect
+            translator_auto = GoogleTranslator(source='auto', target='en')
+            translated = translator_auto.translate(text)
             return translated if translated else text
         except Exception:
             return text
@@ -163,10 +137,10 @@ class EmbeddingService:
     def get_text_embedding(self, text: str) -> List[float]:
         """
         Generate embedding for text query.
-        Automatically translates Spanish to English for better CLIP results.
+        Automatically translates any language to English for better CLIP results.
 
         Args:
-            text: Text to embed (Spanish or English).
+            text: Text to embed (any language).
 
         Returns:
             List of embedding values (512 dimensions).
@@ -174,12 +148,10 @@ class EmbeddingService:
         if not self._is_loaded:
             self.load_model()
 
-        # Traducir español a inglés si es necesario
-        if self._is_spanish(text):
-            text_en = self._translate_to_english(text)
+        # Siempre traducir a inglés (auto-detect idioma)
+        text_en = self._translate_to_english(text)
+        if text_en.lower() != text.lower():
             print(f"Traducción: '{text}' → '{text_en}'")
-        else:
-            text_en = text
 
         # Usar un prompt que le de más contexto al modelo
         prompt = f"a painting of {text_en}"
