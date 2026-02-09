@@ -138,6 +138,7 @@ class EmbeddingService:
         """
         Generate embedding for text query.
         Automatically translates any language to English for better CLIP results.
+        Uses multiple prompts and averages them for better semantic matching.
 
         Args:
             text: Text to embed (any language).
@@ -153,22 +154,35 @@ class EmbeddingService:
         if text_en.lower() != text.lower():
             print(f"Traducción: '{text}' → '{text_en}'")
 
-        # Usar un prompt que le de más contexto al modelo
-        prompt = f"a painting of {text_en}"
+        # Usar múltiples prompts para capturar tanto contenido como estilo
+        prompts = [
+            text_en,  # Búsqueda directa del contenido
+            f"a {text_en}",  # Con artículo
+            f"an image of {text_en}",  # Contexto de imagen
+            f"a painting of {text_en}",  # Contexto artístico
+        ]
 
         inputs = self.processor(
-            text=[prompt],
+            text=prompts,
             return_tensors="pt",
-            padding=True
+            padding=True,
+            truncation=True
         )
 
         with torch.no_grad():
             text_features = self.model.get_text_features(**inputs)
+            # Normalizar cada embedding
             text_features = text_features / text_features.norm(
                 p=2, dim=-1, keepdim=True
             )
+            # Promediar todos los prompts
+            avg_features = text_features.mean(dim=0, keepdim=True)
+            # Re-normalizar el promedio
+            avg_features = avg_features / avg_features.norm(
+                p=2, dim=-1, keepdim=True
+            )
 
-        return text_features.squeeze().tolist()
+        return avg_features.squeeze().tolist()
 
     @staticmethod
     def embedding_to_pg_format(embedding: List[float]) -> str:

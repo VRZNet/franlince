@@ -194,7 +194,7 @@ class PaintingRepository:
         Args:
             query_embedding: Text query embedding.
             limit: Maximum results.
-            min_similarity: Minimum similarity threshold (default 0.28 = 28%).
+            min_similarity: Minimum similarity threshold (default 0.18 = 18%).
 
         Returns:
             List of matching paintings with similarity scores.
@@ -202,10 +202,22 @@ class PaintingRepository:
         embedding_str = EmbeddingService.embedding_to_pg_format(query_embedding)
 
         with DatabaseConnection.get_cursor() as cursor:
-            # Usar L2 distance (<->) que funciona mejor con CLIP
-            # Usar inner product (<#>) que es más rapido y equivale a cosine
-            # similarity si los vectores están normalizados.
-            # El resultado de <#> es negativo, por eso se multiplica por -1.
+            # Debug: ver todas las similitudes sin filtro para diagnóstico
+            cursor.execute("""
+                SELECT
+                    archivo, estilo_principal,
+                    (embedding <#> %s::vector) * -1 as similitud
+                FROM pinturas
+                WHERE embedding IS NOT NULL
+                ORDER BY embedding <#> %s::vector
+                LIMIT 5
+            """, (embedding_str, embedding_str))
+            top_5 = cursor.fetchall()
+            print(f"[DEBUG] Top 5 similitudes (sin filtro):")
+            for row in top_5:
+                print(f"  - {row['archivo']}: {row['similitud']:.4f} ({row['estilo_principal']})")
+
+            # Búsqueda real con filtro
             cursor.execute("""
                 SELECT
                     id, archivo, ruta, estilo_principal, confianza,
@@ -218,6 +230,56 @@ class PaintingRepository:
             """, (embedding_str, embedding_str, min_similarity, embedding_str, limit))
 
             return [dict(row) for row in cursor.fetchall()]
+
+    def get_similarity_for_painting(
+        self,
+        query_embedding: List[float],
+        painting_id: str
+    ) -> Optional[dict]:
+        """
+        Get similarity score for a specific painting.
+
+        Args:
+            query_embedding: Text query embedding.
+            painting_id: UUID of the painting.
+
+        Returns:
+            Dict with painting info and similarity, or None.
+        """
+        embedding_str = EmbeddingService.embedding_to_pg_format(query_embedding)
+
+        with DatabaseConnection.get_cursor() as cursor:
+            # Get similarity for specific painting
+            cursor.execute("""
+                SELECT
+                    id, archivo, estilo_principal,
+                    (embedding <#> %s::vector) * -1 as similitud
+                FROM pinturas
+                WHERE id = %s AND embedding IS NOT NULL
+            """, (embedding_str, painting_id))
+
+            result = cursor.fetchone()
+            if not result:
+                return None
+
+            # Get rank (position) among all paintings
+            cursor.execute("""
+                SELECT COUNT(*) + 1 as rank
+                FROM pinturas
+                WHERE embedding IS NOT NULL
+                  AND (embedding <#> %s::vector) < (
+                      SELECT embedding <#> %s::vector
+                      FROM pinturas
+                      WHERE id = %s
+                  )
+            """, (embedding_str, embedding_str, painting_id))
+
+            rank_result = cursor.fetchone()
+
+            return {
+                **dict(result),
+                "rank": rank_result["rank"] if rank_result else None
+            }
 
     def delete(self, painting_id: str) -> Optional[dict]:
         """

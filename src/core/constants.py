@@ -98,4 +98,5 @@ MEDIA_TYPES: Dict[str, str] = {
 CLASSIFICATION_TEMPERATURE: float = 0.5
 
 # Minimum similarity threshold for semantic search (28%)
-MIN_SIMILARITY_THRESHOLD: float = 0.28
+# CLIP text-image similarities are typically in 0.20-0.35 range for good matches
+MIN_SIMILARITY_THRESHOLD: float = 0.26
