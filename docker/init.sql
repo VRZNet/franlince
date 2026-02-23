@@ -7,6 +7,7 @@ CREATE TABLE IF NOT EXISTS pinturas (
     archivo VARCHAR(255) NOT NULL,
     ruta VARCHAR(500),
     imagen BYTEA,
+    -- Style classification
     estilo_principal VARCHAR(50) NOT NULL,
     confianza FLOAT NOT NULL,
     estilo_2 VARCHAR(50),
@@ -14,7 +15,18 @@ CREATE TABLE IF NOT EXISTS pinturas (
     estilo_3 VARCHAR(50),
     confianza_3 FLOAT,
     todos_estilos JSONB,
-    embedding vector(512),
+    -- Emotion classification
+    emocion_principal VARCHAR(50),
+    emocion_confianza FLOAT,
+    emocion_2 VARCHAR(50),
+    emocion_2_confianza FLOAT,
+    emocion_3 VARCHAR(50),
+    emocion_3_confianza FLOAT,
+    todas_emociones JSONB,
+    -- Embeddings
+    embedding vector(512),              -- Visual content embedding
+    embedding_emocional vector(512),    -- Emotional embedding
+    -- Timestamps
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
@@ -22,6 +34,7 @@ CREATE TABLE IF NOT EXISTS pinturas (
 -- Indexes for fast searches
 CREATE INDEX IF NOT EXISTS idx_pinturas_estilo ON pinturas(estilo_principal);
 CREATE INDEX IF NOT EXISTS idx_pinturas_archivo ON pinturas(archivo);
+CREATE INDEX IF NOT EXISTS idx_pinturas_emocion ON pinturas(emocion_principal);
 
 -- Vector similarity search index (IVFFlat)
 -- Created after having data with: CREATE INDEX ON pinturas USING ivfflat (embedding vector_cosine_ops) WITH (lists = 10);
@@ -49,4 +62,15 @@ SELECT
     ROUND(AVG(confianza)::numeric, 3) as confianza_promedio
 FROM pinturas
 GROUP BY estilo_principal
+ORDER BY cantidad DESC;
+
+-- Emotion summary view
+CREATE OR REPLACE VIEW resumen_emociones AS
+SELECT
+    emocion_principal,
+    COUNT(*) as cantidad,
+    ROUND(AVG(emocion_confianza)::numeric, 3) as confianza_promedio
+FROM pinturas
+WHERE emocion_principal IS NOT NULL
+GROUP BY emocion_principal
 ORDER BY cantidad DESC;

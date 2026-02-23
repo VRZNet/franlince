@@ -16,6 +16,13 @@ class StyleScoreSchema(BaseModel):
     confianza: float
 
 
+# Emotion classification schemas
+class EmotionScoreSchema(BaseModel):
+    """Emotion classification score."""
+    emocion: str
+    confianza: float
+
+
 class ClassificationResult(BaseModel):
     """Result of image classification."""
     estilo_principal: str
@@ -86,6 +93,9 @@ class UploadResultData(BaseModel):
     estilo_principal: str
     confianza: float = Field(description="Confidence as percentage (0-100)")
     top_estilos: List[StyleScoreSchema]
+    emocion_principal: Optional[str] = None
+    confianza_emocion: Optional[float] = None
+    top_emociones: Optional[List[EmotionScoreSchema]] = None
 
 
 class UploadResponse(BaseModel):
@@ -150,6 +160,45 @@ class SemanticSearchResponse(BaseModel):
     query: str
     total: int
     resultados: List[SearchResultItem]
+
+
+# Hybrid search schemas
+class HybridSearchResultItem(BaseModel):
+    """Single hybrid search result with content and emotion scores."""
+    id: str
+    archivo: str
+    ruta: Optional[str] = None
+    estilo: str
+    emocion: Optional[str] = None
+    similitud_contenido: float
+    similitud_emocion: float
+    score_combinado: float
+
+
+class HybridSearchResponse(BaseModel):
+    """Response for hybrid (content + emotion) search."""
+    query: str
+    contenido_buscado: str
+    emocion_buscada: str
+    total: int
+    resultados: List[HybridSearchResultItem]
+
+
+class EmotionSearchResultItem(BaseModel):
+    """Single emotion search result."""
+    id: str
+    archivo: str
+    ruta: Optional[str] = None
+    estilo: str
+    emocion_principal: Optional[str] = None
+    similitud_emocion: float
+
+
+class EmotionSearchResponse(BaseModel):
+    """Response for emotion-only search."""
+    query: str
+    total: int
+    resultados: List[EmotionSearchResultItem]
 
 
 # Stats schemas

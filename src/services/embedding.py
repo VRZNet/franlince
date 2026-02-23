@@ -1,9 +1,12 @@
 """
 Embedding service for generating image and text embeddings.
+Supports both visual content embeddings and emotional embeddings.
 """
 
-from typing import Optional, List
+import re
+from typing import Optional, List, Tuple
 
+import numpy as np
 import torch
 from PIL import Image
 from transformers import CLIPProcessor, CLIPModel
@@ -11,6 +14,7 @@ from deep_translator import GoogleTranslator
 
 from src.core.config import get_settings
 from src.services.image_processor import ImageProcessor
+from src.core.constants import EMOTION_CATEGORIES, EMOTION_KEYWORDS_ES
 
 
 class EmbeddingService:
@@ -196,3 +200,243 @@ class EmbeddingService:
             String in PostgreSQL vector format "[x,y,z,...]"
         """
         return "[" + ",".join(map(str, embedding)) + "]"
+
+    def get_raw_text_embedding(self, text: str) -> List[float]:
+        """
+        Generate raw embedding for text without prompt variations.
+        Used internally for emotion classification.
+
+        Args:
+            text: Text to embed (should be in English).
+
+        Returns:
+            List of embedding values (512 dimensions).
+        """
+        if not self._is_loaded:
+            self.load_model()
+
+        inputs = self.processor(
+            text=[text],
+            return_tensors="pt",
+            padding=True,
+            truncation=True
+        )
+
+        with torch.no_grad():
+            text_features = self.model.get_text_features(**inputs)
+            text_features = text_features / text_features.norm(
+                p=2, dim=-1, keepdim=True
+            )
+
+        return text_features.squeeze().tolist()
+
+    def get_emotion_text_embedding(self, emotion_text: str) -> List[float]:
+        """
+        Generate embedding optimized for emotional/mood queries.
+        Uses prompts that emphasize emotional aspects.
+
+        Args:
+            emotion_text: Emotional description (any language).
+
+        Returns:
+            List of embedding values (512 dimensions).
+        """
+        if not self._is_loaded:
+            self.load_model()
+
+        text_en = self._translate_to_english(emotion_text)
+        if text_en.lower() != emotion_text.lower():
+            print(f"Traducción emocional: '{emotion_text}' → '{text_en}'")
+
+        # Prompts optimized for emotional/mood search
+        prompts = [
+            f"artwork that evokes {text_en}",
+            f"painting with {text_en} mood and atmosphere",
+            f"art expressing the feeling of {text_en}",
+            f"image that inspires {text_en}",
+            f"visual art with emotional tone of {text_en}"
+        ]
+
+        inputs = self.processor(
+            text=prompts,
+            return_tensors="pt",
+            padding=True,
+            truncation=True
+        )
+
+        with torch.no_grad():
+            text_features = self.model.get_text_features(**inputs)
+            text_features = text_features / text_features.norm(
+                p=2, dim=-1, keepdim=True
+            )
+            avg_features = text_features.mean(dim=0, keepdim=True)
+            avg_features = avg_features / avg_features.norm(
+                p=2, dim=-1, keepdim=True
+            )
+
+        return avg_features.squeeze().tolist()
+
+    def get_image_emotion_embedding(self, image: Image.Image) -> List[float]:
+        """
+        Generate emotion-focused embedding for an image.
+        Compares the image against emotional prompts to create
+        an embedding that captures its emotional essence.
+
+        Args:
+            image: PIL Image to analyze.
+
+        Returns:
+            List of embedding values (512 dimensions).
+        """
+        if not self._is_loaded:
+            self.load_model()
+
+        # Get image embedding
+        image_embedding = np.array(self.get_image_embedding(image))
+
+        # Calculate similarity with each emotion category
+        emotion_scores = []
+        for emotion_name, prompts in EMOTION_CATEGORIES.items():
+            # Get average embedding for this emotion's prompts
+            prompt_embeddings = []
+            for prompt in prompts:
+                emb = self.get_raw_text_embedding(prompt)
+                prompt_embeddings.append(emb)
+
+            emotion_embedding = np.mean(prompt_embeddings, axis=0)
+            emotion_embedding = emotion_embedding / np.linalg.norm(emotion_embedding)
+
+            # Calculate similarity
+            similarity = np.dot(image_embedding, emotion_embedding)
+            emotion_scores.append((emotion_name, similarity))
+
+        # Create weighted combination of top emotion embeddings
+        emotion_scores.sort(key=lambda x: x[1], reverse=True)
+        top_emotions = emotion_scores[:5]  # Top 5 emotions
+
+        # Weight embeddings by their similarity scores
+        weighted_embedding = np.zeros(512)
+        total_weight = 0
+
+        for emotion_name, score in top_emotions:
+            if score > 0:
+                prompts = EMOTION_CATEGORIES[emotion_name]
+                prompt_embeddings = [
+                    self.get_raw_text_embedding(p) for p in prompts
+                ]
+                emotion_emb = np.mean(prompt_embeddings, axis=0)
+                weighted_embedding += emotion_emb * score
+                total_weight += score
+
+        if total_weight > 0:
+            weighted_embedding = weighted_embedding / total_weight
+            weighted_embedding = weighted_embedding / np.linalg.norm(weighted_embedding)
+
+        return weighted_embedding.tolist()
+
+    def classify_emotions(
+        self,
+        image: Image.Image,
+        top_k: int = 5
+    ) -> List[dict]:
+        """
+        Classify the emotions an image evokes.
+
+        Args:
+            image: PIL Image to classify.
+            top_k: Number of top emotions to return.
+
+        Returns:
+            List of dicts with emotion name and confidence score.
+        """
+        if not self._is_loaded:
+            self.load_model()
+
+        image_embedding = np.array(self.get_image_embedding(image))
+
+        emotion_scores = []
+        for emotion_name, prompts in EMOTION_CATEGORIES.items():
+            prompt_embeddings = []
+            for prompt in prompts:
+                emb = self.get_raw_text_embedding(prompt)
+                prompt_embeddings.append(emb)
+
+            emotion_embedding = np.mean(prompt_embeddings, axis=0)
+            emotion_embedding = emotion_embedding / np.linalg.norm(emotion_embedding)
+
+            similarity = np.dot(image_embedding, emotion_embedding)
+            emotion_scores.append({
+                "emocion": emotion_name,
+                "confianza": float(similarity)
+            })
+
+        # Sort by confidence and return top_k
+        emotion_scores.sort(key=lambda x: x["confianza"], reverse=True)
+        return emotion_scores[:top_k]
+
+    def parse_hybrid_query(self, query: str) -> Tuple[str, str, bool]:
+        """
+        Parse a query to separate visual content from emotional content.
+
+        Handles queries like:
+        - "caballo que inspire libertad" → ("caballo", "libertad", True)
+        - "flores coloridas con energía" → ("flores coloridas", "energía", True)
+        - "paisaje montañoso" → ("paisaje montañoso", "", False)
+
+        Args:
+            query: Natural language query.
+
+        Returns:
+            Tuple of (content_query, emotion_query, has_emotion).
+        """
+        query_lower = query.lower()
+
+        # Check if query contains emotional keywords
+        has_emotion = any(kw in query_lower for kw in EMOTION_KEYWORDS_ES)
+
+        if not has_emotion:
+            return (query, "", False)
+
+        # Patterns to split content from emotion
+        patterns = [
+            r"(.+?)\s+que\s+(?:inspire|inspira|evoque|evoca|transmita|transmite|exprese|expresa)\s+(.+)",
+            r"(.+?)\s+con\s+(?:sensación|sentimiento|emoción|ambiente|atmósfera)\s+(?:de\s+)?(.+)",
+            r"(.+?)\s+(?:inspirando|evocando|transmitiendo|expresando)\s+(.+)",
+            r"(.+?)\s+que\s+(?:de|genere|provoque)\s+(.+)",
+        ]
+
+        for pattern in patterns:
+            match = re.search(pattern, query, re.IGNORECASE)
+            if match:
+                content = match.group(1).strip()
+                emotion = match.group(2).strip()
+                return (content, emotion, True)
+
+        # Check for emotion keywords at the end
+        emotion_found = ""
+        content = query
+
+        for emotion in EMOTION_CATEGORIES.keys():
+            emotion_lower = emotion.lower()
+            if emotion_lower in query_lower:
+                emotion_found = emotion
+                # Remove emotion from content
+                content = re.sub(
+                    rf"\b{emotion_lower}\b",
+                    "",
+                    query,
+                    flags=re.IGNORECASE
+                ).strip()
+                # Clean up connectors
+                content = re.sub(
+                    r"\s+(y|con|que|de)\s*$",
+                    "",
+                    content,
+                    flags=re.IGNORECASE
+                ).strip()
+                break
+
+        if emotion_found:
+            return (content, emotion_found, True)
+
+        return (query, "", False)

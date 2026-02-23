@@ -46,6 +46,9 @@ async def upload_painting(
 
         painting_id = repository.save(unique_filename, image_bytes, classification)
 
+        # Prepare emotion data for response
+        top_emociones = classification.get("top_emociones", [])
+
         return {
             "success": True,
             "message": "Pintura catalogada exitosamente",
@@ -60,7 +63,16 @@ async def upload_painting(
                         "confianza": round(e["confianza"] * 100, 1)
                     }
                     for e in classification["top_estilos"]
-                ]
+                ],
+                "emocion_principal": top_emociones[0]["emocion"] if top_emociones else None,
+                "confianza_emocion": round(top_emociones[0]["confianza"] * 100, 1) if top_emociones else None,
+                "top_emociones": [
+                    {
+                        "emocion": e["emocion"],
+                        "confianza": round(e["confianza"] * 100, 1)
+                    }
+                    for e in top_emociones[:3]
+                ] if top_emociones else []
             }
         }
 
@@ -104,12 +116,15 @@ async def upload_paintings_batch(
                 unique_filename, image_bytes, classification
             )
 
+            top_emociones = classification.get("top_emociones", [])
             results.append({
                 "id": painting_id,
                 "archivo_original": file.filename,
                 "archivo_guardado": unique_filename,
                 "estilo": classification["estilo_principal"],
-                "confianza": round(classification["confianza"] * 100, 1)
+                "confianza": round(classification["confianza"] * 100, 1),
+                "emocion": top_emociones[0]["emocion"] if top_emociones else None,
+                "confianza_emocion": round(top_emociones[0]["confianza"] * 100, 1) if top_emociones else None
             })
 
         except Exception as e:
