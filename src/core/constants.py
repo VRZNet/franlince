@@ -1183,14 +1183,16 @@ EMOTION_CATEGORIES: Dict[str, List[str]] = {
 }
 
 # Keywords to detect emotional queries (Spanish)
-EMOTION_KEYWORDS_ES: Set[str] = {
+_EMOTION_VERB_KEYWORDS: Set[str] = {
     "inspire", "inspira", "inspirar", "inspiración",
     "evoque", "evocar", "evoca", "evocación",
     "transmita", "transmitir", "transmite",
     "sensación", "sentimiento", "emoción", "emociones",
     "que exprese", "expresar", "expresa",
     "ambiente", "atmósfera", "mood",
-    "energía", "paz", "alegría", "libertad", "amor",
-    "fuerza", "ternura", "nostalgia", "aventura",
-    "romanticismo", "misterio", "esperanza", "rebeldía"
+}
+
+# Automatically include all emotion category names as keywords
+EMOTION_KEYWORDS_ES: Set[str] = _EMOTION_VERB_KEYWORDS | {
+    name.lower() for name in EMOTION_CATEGORIES.keys()
 }
