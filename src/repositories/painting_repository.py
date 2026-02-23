@@ -154,7 +154,8 @@ class PaintingRepository:
             if estilo:
                 cursor.execute("""
                     SELECT id, archivo, ruta, estilo_principal, confianza,
-                           estilo_2, confianza_2, estilo_3, confianza_3, created_at
+                           estilo_2, confianza_2, estilo_3, confianza_3,
+                           emocion_principal, created_at
                     FROM pinturas
                     WHERE estilo_principal = %s
                     ORDER BY created_at DESC
@@ -163,7 +164,8 @@ class PaintingRepository:
             else:
                 cursor.execute("""
                     SELECT id, archivo, ruta, estilo_principal, confianza,
-                           estilo_2, confianza_2, estilo_3, confianza_3, created_at
+                           estilo_2, confianza_2, estilo_3, confianza_3,
+                           emocion_principal, created_at
                     FROM pinturas
                     ORDER BY created_at DESC
                     LIMIT %s OFFSET %s
