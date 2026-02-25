@@ -112,7 +112,7 @@ MIN_EMOTION_SIMILARITY: float = 0.22
 
 # Hard minimum similarity - backend enforced floor that cannot be bypassed
 # by frontend query parameters. Prevents returning completely irrelevant results.
-HARD_MIN_SIMILARITY: float = 0.25
+HARD_MIN_SIMILARITY: float = 0.26
 
 # =============================================================================
 # EMOTION CLASSIFICATION CONFIGURATION
@@ -241,6 +241,10 @@ EMOTION_CATEGORIES: Dict[str, List[str]] = {
         # Naturaleza como energía pura
         "painting of a thunderstorm over the ocean with dramatic dark clouds and lightning",
         "artwork of wildfire, volcanic eruption or natural forces unleashed with intensity",
+
+        # Personajes en acción dinámica
+        "cartoon or animated character jumping running or punching with dynamic action pose and bold colors",
+        "illustration of a heroic figure mid-leap with fist forward in explosive energetic motion",
     ],
     "romanticismo": [
         # Gestos físicos concretos de amor
@@ -445,6 +449,10 @@ EMOTION_CATEGORIES: Dict[str, List[str]] = {
         # Acción y peligro
         "painting of a figure leaping across a chasm, crossing a rope bridge or scaling a cliff",
         "artwork of a small human figure dwarfed by enormous untamed natural forces and landscape",
+
+        # Personajes animados en aventura
+        "cartoon hero character on an epic quest running through colorful worlds collecting treasures",
+        "illustration of an animated adventurer jumping over obstacles in a fantastical vibrant world",
     ],
    "esperanza": [
         # Luz como metáfora visual más universal de esperanza
@@ -1023,9 +1031,9 @@ EMOTION_CATEGORIES: Dict[str, List[str]] = {
         "painting of eyes burning with cold controlled fury more terrifying than open explosive rage",
         
         # El gesto físico de ira explosiva
-        "artwork of a figure smashing overturning or destroying objects in explosive uncontained fury",
-        "painting of fists raised or a table overturned in a sudden violent eruption of anger",
-        "artwork of a figure lunging forward with rage at someone or something that has caused great harm",
+        "artwork of a figure smashing and destroying furniture in blind uncontrolled destructive fury",
+        "painting of an enraged person overturning a table with fists clenched and teeth bared in anger",
+        "artwork of two figures in a violent angry confrontation with hateful expressions and aggressive postures",
         
         # Ira justa ante la injusticia
         "painting of a wronged figure confronting their oppressor with righteous unstoppable fury",
@@ -1038,12 +1046,12 @@ EMOTION_CATEGORIES: Dict[str, List[str]] = {
         "artwork of a figure turned away from the viewer shoulders rigid with suppressed volcanic fury",
         
         # Naturaleza como espejo de ira
-        "painting of a storm breaking with sudden violent fury over a landscape without warning",
-        "artwork of a volcano erupting or a dam bursting releasing catastrophic pent up force",
+        "dark painting of a violent storm destroying houses and uprooting trees in wrathful devastation",
+        "artwork of a blood red sky over a battlefield with smoke and ruins expressing collective human rage",
         
         # Referencias estilísticas poderosas
-        "Goya painting of savage violence and the terrifying face of human rage and brutality",
-        "Expressionist painting with violently distorted figures and clashing colors of emotional fury",
+        "Goya dark painting of savage violence showing the terrifying face of human rage and brutality",
+        "Expressionist painting with dark anguished distorted faces expressing suffering and emotional fury",
         
         # Ira y consecuencias
         "painting of the devastating aftermath of rage with broken objects scattered and silence returned",
@@ -1169,8 +1177,8 @@ EMOTION_CATEGORIES: Dict[str, List[str]] = {
         "artwork of an artist stepping back from their work seeing for the first time it has become beautiful",
         
         # Paleta y composición que CLIP asocia a belleza pura
-        "painting with perfect golden ratio composition harmonious color relationships and flawless technique",
-        "artwork where every element exists in such perfect balance that nothing could be added or removed",
+        "classical painting with soft delicate colors and gentle harmonious composition evoking pure beauty",
+        "artwork of serene natural beauty with soft light gentle curves and ethereal peaceful atmosphere",
         
         # Referencias estilísticas poderosas
         "Botticelli painting of ideal feminine beauty emerging from nature with divine harmonious grace",

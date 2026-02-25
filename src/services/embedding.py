@@ -398,18 +398,34 @@ class EmbeddingService:
             return (query, "", False)
 
         # Patterns to split content from emotion
+        # Verbs include singular and plural subjunctive forms, with optional "o" between verbs
+        _EMOTION_VERBS = (
+            r"(?:inspire[n]?|inspira|evoque[n]?|evoca|transmita[n]?|transmite|exprese[n]?|expresa)"
+        )
+        _EMOTION_VERBS_WITH_OR = (
+            rf"{_EMOTION_VERBS}(?:\s+o\s+{_EMOTION_VERBS})?"
+        )
         patterns = [
-            r"(.+?)\s+que\s+(?:inspire|inspira|evoque|evoca|transmita|transmite|exprese|expresa)\s+(.+)",
+            rf"(.+?)\s+que\s+{_EMOTION_VERBS_WITH_OR}\s+(.+)",
             r"(.+?)\s+con\s+(?:sensación|sentimiento|emoción|ambiente|atmósfera)\s+(?:de\s+)?(.+)",
             r"(.+?)\s+(?:inspirando|evocando|transmitiendo|expresando)\s+(.+)",
-            r"(.+?)\s+que\s+(?:de|genere|provoque)\s+(.+)",
+            r"(.+?)\s+que\s+(?:de[n]?|genere[n]?|provoque[n]?)\s+(.+)",
         ]
+
+        # Generic words that don't add visual meaning
+        _GENERIC_CONTENT = {
+            "pinturas", "pintura", "cuadros", "cuadro", "obras", "obra",
+            "arte", "imágenes", "imagenes", "imagen", "dibujos", "dibujo",
+        }
 
         for pattern in patterns:
             match = re.search(pattern, query, re.IGNORECASE)
             if match:
                 content = match.group(1).strip()
                 emotion = match.group(2).strip()
+                # If content is just a generic word, treat as emotion-only
+                if content.lower() in _GENERIC_CONTENT:
+                    return ("", emotion, True)
                 return (content, emotion, True)
 
         # Check for emotion keywords at the end
