@@ -113,26 +113,27 @@ class EmbeddingService:
         return self.get_image_embedding(image)
 
     # Patrones conversacionales en español que no aportan contenido visual
+    # Nota: (?:\s+(?:de\s+)?)? hace opcional el espacio y "de" al final del patrón
     _QUERY_PREFIXES = [
-        r"^busco\s+una?\s+pintura\s+(de\s+)?",
-        r"^busco\s+un\s+cuadro\s+(de\s+)?",
-        r"^busco\s+algo\s+(de|sobre|con)\s+",
+        r"^busco\s+una?\s+pintura(?:\s+(?:de\s+)?)?",
+        r"^busco\s+un\s+cuadro(?:\s+(?:de\s+)?)?",
+        r"^busco\s+algo\s+(?:de|sobre|con)\s+",
         r"^busco\s+",
-        r"^quiero\s+una?\s+pintura\s+(de\s+)?",
-        r"^quiero\s+un\s+cuadro\s+(de\s+)?",
+        r"^quiero\s+una?\s+pintura(?:\s+(?:de\s+)?)?",
+        r"^quiero\s+un\s+cuadro(?:\s+(?:de\s+)?)?",
         r"^quiero\s+",
-        r"^necesito\s+una?\s+pintura\s+(de\s+)?",
+        r"^necesito\s+una?\s+pintura(?:\s+(?:de\s+)?)?",
         r"^necesito\s+",
-        r"^estoy\s+buscando\s+una?\s+pintura\s+(de\s+)?",
+        r"^estoy\s+buscando\s+una?\s+pintura(?:\s+(?:de\s+)?)?",
         r"^estoy\s+buscando\s+",
-        r"^quisiera\s+una?\s+pintura\s+(de\s+)?",
+        r"^quisiera\s+una?\s+pintura(?:\s+(?:de\s+)?)?",
         r"^quisiera\s+",
-        r"^me\s+gustaría\s+una?\s+pintura\s+(de\s+)?",
+        r"^me\s+gustaría\s+una?\s+pintura(?:\s+(?:de\s+)?)?",
         r"^me\s+gustaría\s+",
-        r"^dame\s+una?\s+pintura\s+(de\s+)?",
-        r"^muéstrame\s+una?\s+pintura\s+(de\s+)?",
-        r"^una?\s+pintura\s+(de\s+)?",
-        r"^un\s+cuadro\s+(de\s+)?",
+        r"^dame\s+una?\s+pintura(?:\s+(?:de\s+)?)?",
+        r"^muéstrame\s+una?\s+pintura(?:\s+(?:de\s+)?)?",
+        r"^una?\s+pintura(?:\s+(?:de\s+)?)?",
+        r"^un\s+cuadro(?:\s+(?:de\s+)?)?",
         r"\s+para\s+el\s+cuarto\s+de\s+mis\s+hijos?\s*$",
         r"\s+para\s+la\s+habitación\s+de\s+mis\s+hijos?\s*$",
         r"\s+para\s+decorar\s+.*$",
@@ -468,10 +469,14 @@ class EmbeddingService:
             if match:
                 content = match.group(1).strip()
                 emotion = match.group(2).strip()
-                # If content is just a generic word, treat as emotion-only
-                if content.lower() in _GENERIC_CONTENT:
+                # Eliminar prefijos conversacionales del contenido (sin fallback al original)
+                stripped = content
+                for prefix in self._QUERY_PREFIXES:
+                    stripped = re.sub(prefix, "", stripped, flags=re.IGNORECASE).strip()
+                # Si tras limpiar queda vacío o solo palabra genérica → solo emoción
+                if not stripped or stripped.lower() in _GENERIC_CONTENT:
                     return ("", emotion, True)
-                return (content, emotion, True)
+                return (stripped, emotion, True)
 
         # Check for emotion keywords at the end
         emotion_found = ""
