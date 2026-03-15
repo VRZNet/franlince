@@ -112,6 +112,48 @@ class EmbeddingService:
         image = self.image_processor.load_from_bytes(image_bytes)
         return self.get_image_embedding(image)
 
+    # Patrones conversacionales en español que no aportan contenido visual
+    _QUERY_PREFIXES = [
+        r"^busco\s+una?\s+pintura\s+(de\s+)?",
+        r"^busco\s+un\s+cuadro\s+(de\s+)?",
+        r"^busco\s+algo\s+(de|sobre|con)\s+",
+        r"^busco\s+",
+        r"^quiero\s+una?\s+pintura\s+(de\s+)?",
+        r"^quiero\s+un\s+cuadro\s+(de\s+)?",
+        r"^quiero\s+",
+        r"^necesito\s+una?\s+pintura\s+(de\s+)?",
+        r"^necesito\s+",
+        r"^estoy\s+buscando\s+una?\s+pintura\s+(de\s+)?",
+        r"^estoy\s+buscando\s+",
+        r"^quisiera\s+una?\s+pintura\s+(de\s+)?",
+        r"^quisiera\s+",
+        r"^me\s+gustaría\s+una?\s+pintura\s+(de\s+)?",
+        r"^me\s+gustaría\s+",
+        r"^dame\s+una?\s+pintura\s+(de\s+)?",
+        r"^muéstrame\s+una?\s+pintura\s+(de\s+)?",
+        r"^una?\s+pintura\s+(de\s+)?",
+        r"^un\s+cuadro\s+(de\s+)?",
+        r"\s+para\s+el\s+cuarto\s+de\s+mis\s+hijos?\s*$",
+        r"\s+para\s+la\s+habitación\s+de\s+mis\s+hijos?\s*$",
+        r"\s+para\s+decorar\s+.*$",
+    ]
+
+    def _normalize_query(self, text: str) -> str:
+        """
+        Elimina frases conversacionales del inicio/fin de la query,
+        dejando solo el contenido descriptivo para CLIP.
+
+        Ejemplo: "Busco una pintura de personajes de videojuegos para el cuarto de mis hijos"
+                → "personajes de videojuegos"
+        """
+        normalized = text.strip()
+        for pattern in self._QUERY_PREFIXES:
+            normalized = re.sub(pattern, "", normalized, flags=re.IGNORECASE).strip()
+        result = normalized.strip()
+        if result:
+            print(f"[normalize_query] '{text}' → '{result}'")
+        return result if result else text
+
     def _translate_to_english(self, text: str) -> str:
         """
         Translate text to English, trying Spanish first then auto-detection.
@@ -152,6 +194,9 @@ class EmbeddingService:
         """
         if not self._is_loaded:
             self.load_model()
+
+        # Eliminar frases conversacionales antes de embeddear
+        text = self._normalize_query(text)
 
         # Siempre traducir a inglés (auto-detect idioma)
         text_en = self._translate_to_english(text)
