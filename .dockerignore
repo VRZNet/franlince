@@ -1,0 +1,45 @@
+# Virtual environments
+env/
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Tests
+tests/
+.pytest_cache/
+htmlcov/
+.coverage
+
+# IDE
+.vscode/
+.idea/
+
+# Git
+.git/
+.gitignore
+
+# Local environment
+.env
+*.env
+
+# Docker
+Dockerfile
+.dockerignore
+
+# Uploaded images (not needed in image)
+pinturas_catalogo/
+perros.jpg
+
+# Data files
+*.json
+*.csv
+
+# Scripts (optional, remove if you need them)
+scripts/
+
+# Docs
+*.md

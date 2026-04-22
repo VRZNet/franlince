@@ -25,9 +25,7 @@ async def upload_painting(
 ):
     """
     Upload an image, classify it automatically, and save to catalog.
-
     - **file**: Painting image (JPG, PNG, etc.)
-
     Returns the painting ID and classification.
     """
     if file.content_type not in ALLOWED_IMAGE_TYPES:
